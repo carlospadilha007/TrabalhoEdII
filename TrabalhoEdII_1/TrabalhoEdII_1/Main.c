@@ -7,7 +7,8 @@
 int main() {
 	setlocale(LC_ALL, "Portuguese");
 	TUsuario vet[n];
-	escreveVetor(vet); //teste
+	escreveVetor(vet);
+	system("cls");
 	imprimiVetor(vet);
 	shellSort(vet, 0, n - 1);
 	imprimiVetor(vet);
