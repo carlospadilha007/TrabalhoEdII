@@ -5,7 +5,7 @@
 #include"Sort.h"
 
 void bubbleSort(TUsuario* vet) {
-	int  topo, bolha;
+	long int  topo, bolha;
 	TUsuario aux;
 	for (topo = 1; topo < n; topo++) {
 		for (bolha = n - 1; bolha >= topo; bolha--) {
@@ -19,7 +19,7 @@ void bubbleSort(TUsuario* vet) {
 }
 
 void insertionSort(TUsuario* vet) {
-	int idChave, i;
+	long int idChave, i;
 	TUsuario chaveAtual;
 	for (idChave = 1; idChave < n; idChave++) {
 		chaveAtual = vet[idChave];
@@ -33,7 +33,7 @@ void insertionSort(TUsuario* vet) {
 }
 
 void selectionSort(TUsuario* vet) {
-	int idChave, idTemp, menorChave, idMenor;
+	long int idChave, idTemp, menorChave, idMenor;
 	TUsuario aux;
 	for (idChave = 0; idChave < n - 1; idChave++) {
 		menorChave = vet[idChave].codigo;
@@ -51,7 +51,7 @@ void selectionSort(TUsuario* vet) {
 }
 
 void mergeSort(TUsuario* vet, int p, int r) {
-	int q;
+	long int q;
 	if (p < r) {
 		q = (int)(p + r) / 2;
 		mergeSort(vet, p, q);
@@ -62,7 +62,7 @@ void mergeSort(TUsuario* vet, int p, int r) {
 
 
 void merge(TUsuario* vet, int p, int q, int r) {
-	int n1, n2, i, j, k;
+	long int n1, n2, i, j, k;
 	n1 = q - p + 1;
 	n2 = r - q;
 	TUsuario* E, *D;
@@ -91,7 +91,7 @@ void merge(TUsuario* vet, int p, int q, int r) {
 }
 
 void shellSort(TUsuario* vet) {
-	int k, h, idChave, i;
+	long int k, h, idChave, i;
 	TUsuario chaveAtual;
 	k = 3; h = 1;
 	while (h <= n) {
