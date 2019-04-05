@@ -1,7 +1,7 @@
 #pragma once
 
 // Constantes
-#define n 5
+#define n 100000
 
 // Variáveis globais
 char args[30];
@@ -28,6 +28,8 @@ void escreveVetor(TUsuario vet[]);
 void imprimiVetor(TUsuario vet[]);
 
 // Manipulador de dados
-void escreverArquivos(char args[]);
-void leitorArquivos(char args[]);
-void geraArquivos(char args[]);
+void escreverArquivos();
+void leitorArquivos(TUsuario *vet);
+void criaArquivos();
+void criaCodigo(TUsuario *vet);
+void criaDadosVetor(TUsuario *vet);

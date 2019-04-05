@@ -6,12 +6,11 @@
 
 int main() {
 	setlocale(LC_ALL, "Portuguese");
-	TUsuario vet[n];
-	escreveVetor(vet);
-	system("cls");
-	imprimiVetor(vet);
-	shellSort(vet, 0, n - 1);
-	imprimiVetor(vet);
+	TUsuario *vet;
+	vet = (TUsuario*)malloc(sizeof(TUsuario) * (n));
+	criaArquivos();
+	criaCodigo(vet);
+	criaDadosVetor(vet);
 	getch();
 	return 0;
 }
