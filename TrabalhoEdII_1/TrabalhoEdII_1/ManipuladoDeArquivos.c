@@ -20,8 +20,14 @@ void leitorArquivos(TUsuario *vet) {
 	}
 	file = fclose(args);
 }
-void escreverArquivos() {
-
+void escreverArquivos(TUsuario *vet) {
+	FILE *file;
+	file = fopen("Entrada.dat", "w");
+	long int i;
+	for (i = 0; i < n; i++) {
+		fprintf(file, "li%\n", vet[i].codigo);
+	}
+	return;
 }
 
 void criaCodigo(TUsuario *vet) {

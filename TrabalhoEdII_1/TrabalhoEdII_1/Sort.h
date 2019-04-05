@@ -28,7 +28,7 @@ void escreveVetor(TUsuario vet[]);
 void imprimiVetor(TUsuario vet[]);
 
 // Manipulador de dados
-void escreverArquivos();
+void escreverArquivos(TUsuario *vet);
 void leitorArquivos(TUsuario *vet);
 void criaArquivos();
 void criaCodigo(TUsuario *vet);
