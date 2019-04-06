@@ -7,6 +7,7 @@
 int main() {
 	setlocale(LC_ALL, "Portuguese");
 	srand(time(NULL));
+	buscaBinariaTempoExecucao = 0, buscaSequencialTempoExecucao = 0;
 	TUsuario *vet;
 	vet = (TUsuario*)malloc(sizeof(TUsuario) * (n));
 	criaArquivos();

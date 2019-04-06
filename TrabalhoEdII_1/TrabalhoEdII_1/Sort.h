@@ -5,6 +5,7 @@
 
 // Variáveis globais
 char args[30];
+long int auxiliar, buscaBinariaTempoExecucao, buscaSequencialTempoExecucao;
 
 // Estruturas de dados
 typedef struct {

@@ -25,7 +25,7 @@ void escreverArquivos(TUsuario *vet) {
 	file = fopen("Entrada.dat", "w");
 	long int i;
 	for (i = 0; i < n; i++) {
-		fprintf(file, "%li\n", vet[i].codigo);
+		fprintf(file, "%li %s %s %s\n", vet[i].codigo, vet[i].nome, vet[i].email, vet[i].senha);
 	}
 	return;
 }
