@@ -54,12 +54,16 @@ void criaCodigo(TUsuario *vet) {
 
 void criaDadosVetor(TUsuario *vet) {
 	long int i;
-	int j, tam;
+	int j, tam, teste;
 	char aux[50] = "\0";
 	for (i = 0; i < n; i++) {
 		tam = rand() % 30;
 		for (j = 0; j < tam; j++) {
-			vet[i].nome[j] = (char)65 + rand() % 57;
+			teste = 65 + rand() % 57;
+			while(teste >= 90 && teste <= 94) {
+				teste = 65 + rand() % 57;
+			}
+			vet[i].nome[j] = (char)teste;
 		}
 		vet[i].nome[j] = '\0';
 		tam = rand() % 30;
