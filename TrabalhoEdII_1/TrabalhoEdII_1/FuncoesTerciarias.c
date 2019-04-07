@@ -3,9 +3,9 @@
 #include<stdlib.h>
 #include<string.h>
 #include "Sort.h"
-void imprimiVetor(TUsuario vet[]) {
-	int i;
-	for (i = 0; i < n; i++) {
+void imprimiVetor(TUsuario vet[], long int inicio, long int fim) {
+	long int i;
+	for (i = inicio; i < fim; i++) {
 		printf("Vetor na posição: %d° \n", i + 1);
 		printf("Codigo: %li\n", vet[i].codigo);
 		printf("Nome: %s\n", vet[i].nome);

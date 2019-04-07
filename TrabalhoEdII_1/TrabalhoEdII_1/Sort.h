@@ -30,7 +30,7 @@ void busca_Binaria(TUsuario *vetor, long int chave);
 
 // Funções de apoio
 void escreveVetor(TUsuario vet[]);
-void imprimiVetor(TUsuario vet[]);
+void imprimiVetor(TUsuario vet[], long int inicio, long int fim);
 
 // Manipulador de dados
 void escreverArquivos(TUsuario *vet);

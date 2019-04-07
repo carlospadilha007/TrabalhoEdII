@@ -22,7 +22,7 @@ void leitorArquivos(TUsuario *vet) {
 }
 void escreverArquivos(TUsuario *vet) {
 	FILE *file;
-	file = fopen("Entrada.dat", "w");
+	file = fopen("Entrada.dat", "wb");
 	long int i;
 	for (i = 0; i < n; i++) {
 		//fprintf(file, "%li %s %s %s\n", vet[i].codigo, vet[i].nome, vet[i].email, vet[i].senha);
@@ -40,13 +40,17 @@ void criaCodigo(TUsuario *vet) {
 	}
 	for (i = 0; i < n; i++) {
 		do {
-			if (betina[num] == 0 && num < 1000000) {
-				betina[num] = 1;
+			if (num < 1000000) {
+				if (betina[num] == 0) {
+					betina[num] = 1;
+				}
 			}
 			num = 0;
 			num += rand() % 10 * (rand() % RAND_MAX + (rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000));
-			if (betina[num] == 0 && num < 1000000) {
-				vet[i].codigo = num;
+			if (num < 1000000) {
+				if (betina[num] == 0) {
+					vet[i].codigo = num;
+				}
 			}
 		} while (betina[num] == 1);
 	}

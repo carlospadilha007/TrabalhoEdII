@@ -10,11 +10,13 @@ int main() {
 	buscaBinariaTempoExecucao = 0, buscaSequencialTempoExecucao = 0;
 	TUsuario *vet;
 	vet = (TUsuario*)malloc(sizeof(TUsuario) * (n));
-	criaArquivos();
+	/*criaArquivos();
 	criaCodigo(vet);
 	criaDadosVetor(vet);
-	mergeSort(vet, 0, n - 1);
 	escreverArquivos(vet);
+	mergeSort(vet, 0, n - 1);*/
+	encheVetor(vet);
+	imprimiVetor(vet, 98000, 100000);
 	getch();
 	return 0;
 }
