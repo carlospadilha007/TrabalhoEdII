@@ -5,7 +5,7 @@
 
 // Variáveis globais
 char args[30];
-long int tempoDeExecucao, buscaBinariaTempoExecucao, buscaSequencialTempoExecucao;
+long int tempoExecucao, buscaBinariaTempoExecucao, buscaSequencialTempoExecucao;
 
 // Estruturas de dados
 typedef struct {
@@ -35,3 +35,13 @@ void criaArquivos();
 void criaCodigo(TUsuario *vet);
 void criaDadosVetor(TUsuario *vet);
 void encheVetor(TUsuario *vet);
+
+//Funções que calcularam o tempo de execução
+void calculadorPricipal(TUsuario *vet);
+void calculaBubble(TUsuario *vet);
+void calculaSelection(TUsuario *vet);
+void calculaInsertion(TUsuario *vet);
+void calculaShell(TUsuario *vet);
+void calculaMerge(TUsuario *vet);
+void calculaHeap(TUsuario *vet);
+void calculaQuick(TUsuario *vet);
