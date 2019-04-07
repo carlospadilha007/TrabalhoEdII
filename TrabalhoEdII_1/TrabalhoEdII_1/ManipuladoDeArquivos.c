@@ -6,7 +6,7 @@
 void criaArquivos() {
 	FILE *file1;
 	FILE *file2;
-	file1 = fopen("Entrada.dat", "w");
+	file1 = fopen("Entrada.dat", "wb");
 	file2 = fopen("Saida.txt", "w");
 	fclose(file1);
 	fclose(file2);
@@ -25,7 +25,8 @@ void escreverArquivos(TUsuario *vet) {
 	file = fopen("Entrada.dat", "w");
 	long int i;
 	for (i = 0; i < n; i++) {
-		fprintf(file, "%li %s %s %s\n", vet[i].codigo, vet[i].nome, vet[i].email, vet[i].senha);
+		//fprintf(file, "%li %s %s %s\n", vet[i].codigo, vet[i].nome, vet[i].email, vet[i].senha);
+		fwrite(&vet[i], sizeof(TUsuario), 1, file);
 	}
 	return;
 }
@@ -57,10 +58,10 @@ void criaDadosVetor(TUsuario *vet) {
 	int j, tam, teste;
 	char aux[50] = "\0";
 	for (i = 0; i < n; i++) {
-		tam = rand() % 30;
+		tam = 1 + rand() % 5 + rand() % 30;
 		for (j = 0; j < tam; j++) {
 			teste = 65 + rand() % 57;
-			while(teste >= 90 && teste <= 94) {
+			while(teste >= 90 && teste <= 94 || teste == 96) {
 				teste = 65 + rand() % 57;
 			}
 			vet[i].nome[j] = (char)teste;
@@ -74,5 +75,18 @@ void criaDadosVetor(TUsuario *vet) {
 		strcpy(vet[i].email, vet[i].nome);
 		strcat(vet[i].email, "@email.com");
 	}
+	return;
+}
+
+void encheVetor(TUsuario *vet) {
+	FILE *file;
+	do {
+		file = fopen("Entrada.dat", "rb");
+	} while (file == NULL);
+	long int i;
+	for (i = 0; i < n; i++) {
+		fread(&vet[i], sizeof(TUsuario), 1, file);
+	}
+	fclose(file);
 	return;
 }

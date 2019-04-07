@@ -5,7 +5,7 @@
 
 // Variáveis globais
 char args[30];
-long int auxiliar, buscaBinariaTempoExecucao, buscaSequencialTempoExecucao;
+long int tempoDeExecucao, buscaBinariaTempoExecucao, buscaSequencialTempoExecucao;
 
 // Estruturas de dados
 typedef struct {
@@ -34,3 +34,4 @@ void leitorArquivos(TUsuario *vet);
 void criaArquivos();
 void criaCodigo(TUsuario *vet);
 void criaDadosVetor(TUsuario *vet);
+void encheVetor(TUsuario *vet);
