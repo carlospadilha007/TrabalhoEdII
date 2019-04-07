@@ -117,6 +117,7 @@
   <ItemGroup>
     <ClCompile Include="AlgorimosDeBusca.c" />
     <ClCompile Include="AlgoritmosDeOrdenacao.c" />
+    <ClCompile Include="CalculadorDeTempo.c" />
     <ClCompile Include="FuncoesTerciarias.c" />
     <ClCompile Include="Main.c" />
     <ClCompile Include="ManipuladoDeArquivos.c" />

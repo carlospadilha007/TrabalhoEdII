@@ -24,6 +24,10 @@ void shellSort(TUsuario* vet);
 void merge(TUsuario* vet, int p, int q, int r);
 void mergeSort(TUsuario* vet, int p, int r);
 
+//Algoritmos de busca
+void busca_Sequencial(TUsuario *vetor, long int chave);
+void busca_Binaria(TUsuario *vetor, long int chave);
+
 // Funções de apoio
 void escreveVetor(TUsuario vet[]);
 void imprimiVetor(TUsuario vet[]);
