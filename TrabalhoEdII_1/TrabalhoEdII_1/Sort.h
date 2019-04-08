@@ -1,11 +1,13 @@
 #pragma once
+#include <time.h>
 
 // Constantes
 #define n 100000
 
 // Variáveis globais
 char args[30];
-long int tempoExecucao, buscaBinariaTempoExecucao, buscaSequencialTempoExecucao;
+double tempoExecucao, buscaBinariaTempoExecucao, buscaSequencialTempoExecucao;
+clock_t inicioExecucao, fimExcucao; // Variaveis do tipo clock que faram a captura do tempo
 
 // Estruturas de dados
 typedef struct {
