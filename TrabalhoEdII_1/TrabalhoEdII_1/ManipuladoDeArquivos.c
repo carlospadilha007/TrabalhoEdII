@@ -94,3 +94,8 @@ void encheVetor(TUsuario *vet) {
 	fclose(file);
 	return;
 }
+void escreveSaida(char tipoBusca[]) {
+	FILE *file;
+	file = fopen("Saida.txt", "a");
+	fprintf(file, "A busca binária aliada ao método de ordenação %d, outrapassou o busca sequencial com %d comparações");
+}

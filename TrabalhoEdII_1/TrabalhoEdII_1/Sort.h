@@ -51,3 +51,4 @@ void calculaShell(TUsuario *vet);
 void calculaMerge(TUsuario *vet);
 void calculaHeap(TUsuario *vet);
 void calculaQuick(TUsuario *vet);
+int geraChave();
