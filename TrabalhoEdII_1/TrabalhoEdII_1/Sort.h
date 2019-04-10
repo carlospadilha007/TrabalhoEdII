@@ -6,7 +6,7 @@
 
 // Variáveis globais
 char *tipoBusca;
-long int comparacoes;
+long int contBuscas;
 double tempoExecucao, buscaBinariaTempoExecucao, buscaSequencialTempoExecucao;
 clock_t inicioExecucao, fimExcucao; // Variaveis do tipo clock que faram a captura do tempo
 
@@ -53,4 +53,4 @@ void calculaShell(TUsuario *vet);
 void calculaMerge(TUsuario *vet);
 void calculaHeap(TUsuario *vet);
 void calculaQuick(TUsuario *vet);
-int geraChave();
+long int geraChave();

@@ -7,16 +7,16 @@
 int main() {
 	setlocale(LC_ALL, "Portuguese");
 	srand(time(NULL));
-	buscaBinariaTempoExecucao = 0, buscaSequencialTempoExecucao = 0;
 	TUsuario *vet;
 	vet = (TUsuario*)malloc(sizeof(TUsuario) * (n));
-	/*criaArquivos();
+	criaArquivos();
 	criaCodigo(vet);
 	criaDadosVetor(vet);
 	escreverArquivos(vet);
-	mergeSort(vet, 0, n - 1);*/
+	mergeSort(vet, 0, n - 1);
 	encheVetor(vet);
 	calculadorPricipal(vet);
+	printf("Fim da execução\n");
 	getch();
 	return 0;
 }

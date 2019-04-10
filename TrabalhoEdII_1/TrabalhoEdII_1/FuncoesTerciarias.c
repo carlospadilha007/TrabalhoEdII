@@ -39,3 +39,14 @@ void escreveVetor(TUsuario vet[]) {
 	printf("\n\n");
 	return;
 }
+
+
+long int geraChave() {
+	long int num = 0;
+	do {
+		num = 0;
+		num += rand() % 10 * (rand() % RAND_MAX + (rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000));
+	} while (num > 1000000);
+
+	return num;
+}
