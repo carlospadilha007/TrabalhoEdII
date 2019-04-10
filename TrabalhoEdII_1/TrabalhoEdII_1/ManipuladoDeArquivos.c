@@ -18,7 +18,7 @@ void leitorArquivos(TUsuario *vet) {
 	if (file == NULL) {
 		return;
 	}
-	file = fclose(args);
+	file = fclose("Entrada.dat");
 }
 void escreverArquivos(TUsuario *vet) {
 	FILE *file;
@@ -94,8 +94,9 @@ void encheVetor(TUsuario *vet) {
 	fclose(file);
 	return;
 }
-void escreveSaida(char tipoBusca[]) {
+void escreveSaida() {
 	FILE *file;
 	file = fopen("Saida.txt", "a");
-	fprintf(file, "A busca binária aliada ao método de ordenação %d, outrapassou o busca sequencial com %d comparações");
+	fprintf(file, "Análise: Busca Sequencial x Busca Binária + %s Sort:\nQuantidade de chaves buscadas : %li\nTempo(s) Busca Sequencial : %.2f\nTempo(s) Busca Binária : %.2f\n", tipoBusca, comparacoes, buscaSequencialTempoExecucao, buscaBinariaTempoExecucao);
+	fclose(file);
 }

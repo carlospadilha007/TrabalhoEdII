@@ -16,7 +16,7 @@ int main() {
 	escreverArquivos(vet);
 	mergeSort(vet, 0, n - 1);*/
 	encheVetor(vet);
-	imprimiVetor(vet, 98000, 100000);
+	calculadorPricipal(vet);
 	getch();
 	return 0;
 }

@@ -5,26 +5,31 @@
 #include "Sort.h"
 
 void calculadorPricipal(TUsuario *vet) {
-
+	tipoBusca = "Merge Sorte";
+	calculaMerge(vet);
+	escreveSaida();
 }
 
 void calculaBubble(TUsuario *vet) {
 	int chave;
+	comparacoes = 0;
 	inicioExecucao = clock();
 	bubbleSort(vet);
 	fimExcucao = clock();
 	buscaBinariaTempoExecucao += (fimExcucao - inicioExecucao) / CLOCKS_PER_SEC;
 	while (buscaBinariaTempoExecucao > buscaSequencialTempoExecucao) {
 		chave = geraChave();
+		//Busca Binária
 		inicioExecucao = clock();
 		busca_Binaria(vet, chave);
 		fimExcucao = clock();
 		buscaBinariaTempoExecucao += (fimExcucao - inicioExecucao) / CLOCKS_PER_SEC;
-
+		//Busca sequencial
 		inicioExecucao = clock();
 		busca_Sequencial(vet, chave);
 		fimExcucao = clock();
 		buscaSequencialTempoExecucao += (fimExcucao - inicioExecucao) / CLOCKS_PER_SEC;
+		comparacoes++;
 	}
 }
 
@@ -41,7 +46,26 @@ void calculaShell(TUsuario *vet) {
 }
 
 void calculaMerge(TUsuario *vet) {
-
+	int chave;
+	comparacoes = 0;
+	inicioExecucao = clock();
+	mergeSort(vet, 0, n -1);
+	fimExcucao = clock();
+	buscaBinariaTempoExecucao += (fimExcucao - inicioExecucao) / CLOCKS_PER_SEC;
+	while (buscaBinariaTempoExecucao > buscaSequencialTempoExecucao) {
+		chave = geraChave();
+		//Busca Binária
+		inicioExecucao = clock();
+		busca_Binaria(vet, chave);
+		fimExcucao = clock();
+		buscaBinariaTempoExecucao += (fimExcucao - inicioExecucao) / CLOCKS_PER_SEC;
+		//Busca sequencial
+		inicioExecucao = clock();
+		busca_Sequencial(vet, chave);
+		fimExcucao = clock();
+		buscaSequencialTempoExecucao += (fimExcucao - inicioExecucao) / CLOCKS_PER_SEC;
+		comparacoes++;
+	}
 }
 
 void calculaHeap(TUsuario *vet) {

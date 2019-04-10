@@ -5,7 +5,8 @@
 #define n 100000
 
 // Variáveis globais
-char args[30];
+char *tipoBusca;
+long int comparacoes;
 double tempoExecucao, buscaBinariaTempoExecucao, buscaSequencialTempoExecucao;
 clock_t inicioExecucao, fimExcucao; // Variaveis do tipo clock que faram a captura do tempo
 
@@ -41,6 +42,7 @@ void criaArquivos();
 void criaCodigo(TUsuario *vet);
 void criaDadosVetor(TUsuario *vet);
 void encheVetor(TUsuario *vet);
+void escreveSaida();
 
 //Funções que calcularam o tempo de execução
 void calculadorPricipal(TUsuario *vet);

@@ -1,0 +1,4 @@
+Análise: Busca Sequencial x Busca Binária + Merge Sorte Sort:
+Quantidade de chaves buscadas : 0
+Tempo(s) Busca Sequencial : 0,00
+Tempo(s) Busca Binária : 0,00
