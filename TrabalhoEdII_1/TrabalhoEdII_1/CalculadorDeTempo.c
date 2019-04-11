@@ -35,6 +35,7 @@ void calculaBubble(TUsuario *vet) {
 	TUsuario *auxvet;
 	auxvet = (TUsuario*)malloc(sizeof(TUsuario) * (n));
 	encheVetor(auxvet);
+	encheVetor(vet);
 	inicioExecucao = clock();
 	bubbleSort(vet);
 	fimExcucao = clock();
@@ -63,6 +64,7 @@ void calculaSelection(TUsuario *vet) {
 	TUsuario *auxvet;
 	auxvet = (TUsuario*)malloc(sizeof(TUsuario) * (n));
 	encheVetor(auxvet);
+	encheVetor(vet);
 	inicioExecucao = clock();
 	selectionSort(vet);
 	fimExcucao = clock();
@@ -91,6 +93,7 @@ void calculaInsertion(TUsuario *vet) {
 	TUsuario *auxvet;
 	auxvet = (TUsuario*)malloc(sizeof(TUsuario) * (n));
 	encheVetor(auxvet);
+	encheVetor(vet);
 	inicioExecucao = clock();
 	insertionSort(vet);
 	fimExcucao = clock();
@@ -119,6 +122,7 @@ void calculaShell(TUsuario *vet) {
 	TUsuario *auxvet;
 	auxvet = (TUsuario*)malloc(sizeof(TUsuario) * (n));
 	encheVetor(auxvet);
+	encheVetor(vet);
 	inicioExecucao = clock();
 	shellSort(vet);
 	fimExcucao = clock();
@@ -147,6 +151,7 @@ void calculaMerge(TUsuario *vet) {
 	TUsuario *auxvet;
 	auxvet = (TUsuario*)malloc(sizeof(TUsuario) * (n));
 	encheVetor(auxvet);
+	encheVetor(vet);
 	inicioExecucao = clock();
 	mergeSort(vet, 0, n - 1);
 	fimExcucao = clock();

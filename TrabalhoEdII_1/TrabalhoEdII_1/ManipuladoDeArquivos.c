@@ -97,6 +97,6 @@ void encheVetor(TUsuario *vet) {
 void escreveSaida() {
 	FILE *file;
 	file = fopen("Saida.txt", "a");
-	fprintf(file, "Analise: Busca Sequencial x Busca Binaria + %s Sort:\nQuantidade de chaves buscadas : %li\nTempo(s) Busca Sequencial : %.5f\nTempo(s) Busca Binaria : %.5f\n\n", tipoBusca, contBuscas, buscaSequencialTempoExecucao, buscaBinariaTempoExecucao);
+	fprintf(file, "Analise: Busca Sequencial x Busca Binaria + %s:\nQuantidade de chaves buscadas : %li\nTempo(s) Busca Sequencial : %.5f\nTempo(s) Busca Binaria : %.5f\n\n", tipoBusca, contBuscas, buscaSequencialTempoExecucao, buscaBinariaTempoExecucao);
 	fclose(file);
 }
