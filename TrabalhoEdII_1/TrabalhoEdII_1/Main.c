@@ -13,10 +13,11 @@ int main() {
 	criaCodigo(vet);
 	criaDadosVetor(vet);
 	escreverArquivos(vet);
-	mergeSort(vet, 0, n - 1);
-	encheVetor(vet);
+	heapSort(vet);
+	imprimiVetor(vet, 99000, n - 1);
+	/*encheVetor(vet);
 	calculadorPricipal(vet);
-	printf("Fim da execução\n");
+	printf("Fim da execução\n");*/
 	getch();
 	return 0;
 }

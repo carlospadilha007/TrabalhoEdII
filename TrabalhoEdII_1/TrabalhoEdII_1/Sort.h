@@ -26,6 +26,8 @@ void selectionSort(TUsuario* vet);
 void shellSort(TUsuario* vet);
 void merge(TUsuario* vet, int p, int q, int r);
 void mergeSort(TUsuario* vet, int p, int r);
+void heapSort(TUsuario* vet);
+void criaHeap(TUsuario* vet, long int i, long int f);
 
 //Algoritmos de busca
 void busca_Sequencial(TUsuario *vetor, long int chave);

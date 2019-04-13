@@ -52,6 +52,9 @@ void criaCodigo(TUsuario *vet) {
 					vet[i].codigo = num;
 				}
 			}
+			if (num > 1000000) {
+				continue;
+			}
 		} while (betina[num] == 1);
 	}
 	free(betina);

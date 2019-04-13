@@ -110,3 +110,41 @@ void shellSort(TUsuario* vet) {
 		}
 	}
 }
+
+void criaHeap(TUsuario* vet, long int i, long int f) {
+	TUsuario aux = vet[i];
+	long int j = (i * 2) + 1;
+
+	while (j <= f) {
+		if (j < f) {
+			if (vet[j].codigo < vet[j + 1].codigo) {
+				j++;
+			}
+		}
+		if (aux.codigo < vet[j].codigo) {
+			vet[i] = vet[j];
+			i = j;
+			j = (i * 2) + 1;
+		}
+		else {
+			j = f + 1;
+		}
+	}
+	vet[i] = aux;
+}
+
+
+void heapSort(TUsuario* vet) {
+	long int i;
+	TUsuario aux;
+
+	for (i = (n - 1) / 2; i >= 0; i--) {
+		criaHeap(vet, i, n - 1);
+	}
+	for (i = (n - 1); i >= 1; i--) {
+		aux = vet[0];
+		vet[0] = vet[i];
+		vet[i] = aux;
+		criaHeap(vet, 0, i - 1);
+	}
+}
