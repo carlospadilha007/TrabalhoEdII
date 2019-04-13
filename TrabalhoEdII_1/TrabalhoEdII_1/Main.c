@@ -13,12 +13,8 @@ int main() {
 	criaCodigo(vet);
 	criaDadosVetor(vet);
 	escreverArquivos(vet);*/
-	encheVetor(vet);
-	quickSort(vet, 0, n - 1);
-	imprimiVetor(vet, 0, 1000);
-	/*encheVetor(vet);
 	calculadorPricipal(vet);
-	printf("Fim da execução\n");*/
+	printf("Fim da execução\n");
 	getch();
 	return 0;
 }
