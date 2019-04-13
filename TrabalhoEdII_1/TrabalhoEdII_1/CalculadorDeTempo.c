@@ -115,11 +115,11 @@ void calculaInsertion(TUsuario *vet) {
 	free(auxvet);
 }
 
-void calculaShell(TUsuario *vet) {
+void calculaShell(TUsuario* vet) {
 	long int chave;
 	buscaBinariaTempoExecucao = buscaSequencialTempoExecucao = 0;
 	contBuscas = 0;
-	TUsuario *auxvet;
+	TUsuario* auxvet;
 	auxvet = (TUsuario*)malloc(sizeof(TUsuario) * (n));
 	encheVetor(auxvet);
 	encheVetor(vet);
