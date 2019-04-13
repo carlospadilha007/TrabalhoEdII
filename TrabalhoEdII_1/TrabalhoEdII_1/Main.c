@@ -9,12 +9,13 @@ int main() {
 	srand(time(NULL));
 	TUsuario *vet;
 	vet = (TUsuario*)malloc(sizeof(TUsuario) * (n));
-	criaArquivos();
+	/*criaArquivos();
 	criaCodigo(vet);
 	criaDadosVetor(vet);
-	escreverArquivos(vet);
-	heapSort(vet);
-	imprimiVetor(vet, 99000, n - 1);
+	escreverArquivos(vet);*/
+	encheVetor(vet);
+	quickSort(vet, 0, n - 1);
+	imprimiVetor(vet, 0, 1000);
 	/*encheVetor(vet);
 	calculadorPricipal(vet);
 	printf("Fim da execução\n");*/

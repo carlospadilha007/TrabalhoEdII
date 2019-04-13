@@ -148,3 +148,37 @@ void heapSort(TUsuario* vet) {
 		criaHeap(vet, 0, i - 1);
 	}
 }
+
+void quickSort(TUsuario* vet, long int p, long int r) {
+	long int q;
+
+	if (p < r) {
+		q = Particiona(vet, p, r);
+		quickSort(vet, p, q - 1);
+		quickSort(vet, q + 1, r);
+	}
+}
+
+int Particiona(TUsuario * vet, long int p, long int r) {
+	long int esq = p;
+	long int dir = r;
+	TUsuario pivo = vet[p];
+	TUsuario aux;
+
+	while (esq < dir) {
+		while ((vet[esq].codigo <= pivo.codigo) && (esq != r + 1)) {
+			esq++;
+		}
+		while (vet[dir].codigo > pivo.codigo) {
+			dir--;
+		}
+		if (esq < dir) {
+			aux = vet[esq];
+			vet[esq] = vet[dir];
+			vet[dir] = aux;
+		}
+	}
+	vet[p] = vet[dir];
+	vet[dir] = pivo;
+	return dir;
+}

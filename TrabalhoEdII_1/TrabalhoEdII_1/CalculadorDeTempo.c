@@ -6,26 +6,33 @@
 
 void calculadorPricipal(TUsuario *vet) {
 	//Calcula o tempo do Bubble
-	tipoBusca = "Bubble Sorte";
+	tipoBusca = "Bubble Sort";
 	calculaBubble(vet);
 	escreveSaida();
 	//Calcula o tempo do Selection
-	tipoBusca = "Selection Sorte";
+	tipoBusca = "Selection Sort";
 	calculaSelection(vet);
 	escreveSaida();
 	//Calcula o tempo do Insertion
-	tipoBusca = "Insertion Sorte";
+	tipoBusca = "Insertion Sort";
 	calculaInsertion(vet);
 	escreveSaida();
 	//Calcula o tempo do Shell
-	tipoBusca = "Shell Sorte";
+	tipoBusca = "Shell Sort";
 	calculaShell(vet);
 	escreveSaida();
-	//Calcula o tempo do merge
-	tipoBusca = "Merge Sorte";
+	//Calcula o tempo do Merge
+	tipoBusca = "Merge Sort";
 	calculaMerge(vet);
 	escreveSaida();
-
+	//Calcula o tempo do Heap
+	tipoBusca = "Heap Sort";
+	calculaHeap(vet);
+	escreveSaida();
+	//Calcula o tempo do Quick
+	tipoBusca = "Quik Sort";
+	calculaQuick(vet);
+	escreveSaida();
 }
 
 void calculaBubble(TUsuario *vet) {
