@@ -5,7 +5,7 @@
 #include "Sort.h"
 
 void calculadorPricipal(TUsuario *vet) {
-	/*//Calcula o tempo do Bubble
+	//Calcula o tempo do Bubble
 	tipoBusca = "Bubble Sort";
 	calculaBubble(vet);
 	escreveSaida();
@@ -16,7 +16,7 @@ void calculadorPricipal(TUsuario *vet) {
 	//Calcula o tempo do Insertion
 	tipoBusca = "Insertion Sort";
 	calculaInsertion(vet);
-	escreveSaida();*/
+	escreveSaida();
 	//Calcula o tempo do Shell
 	tipoBusca = "Shell Sort";
 	calculaShell(vet);

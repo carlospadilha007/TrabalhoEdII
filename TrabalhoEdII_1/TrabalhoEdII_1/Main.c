@@ -12,10 +12,10 @@ int main() {
 	inicio = clock();// inicio da execução
 	TUsuario *vet;
 	vet = (TUsuario*)malloc(sizeof(TUsuario) * (n));
-	criaArquivos();
+	/*criaArquivos();
 	criaDadosVetor(vet);
-	escreverArquivos(vet);
-	//calculadorPricipal(vet);
+	escreverArquivos(vet);*/
+	calculadorPricipal(vet);
 	printf("Fim da execução\n");
 	fim = clock(); // fim da execução
 	tempoExecucao = (double) (fim - inicio)/ CLOCKS_PER_SEC;

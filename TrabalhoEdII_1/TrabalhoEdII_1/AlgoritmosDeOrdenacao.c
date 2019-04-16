@@ -65,7 +65,7 @@ void merge(TUsuario* vet, int p, int q, int r) {
 	long int n1, n2, i, j, k;
 	n1 = (q - p) + 1;
 	n2 = r - q;
-	TUsuario* E, *D;
+	TUsuario *E, *D;
 	E = (TUsuario*)malloc(sizeof(TUsuario) * (n1 + 1));
 	D = (TUsuario*)malloc(sizeof(TUsuario) * (n2 + 1));
 	for (i = 0; i < n1; i++) {
