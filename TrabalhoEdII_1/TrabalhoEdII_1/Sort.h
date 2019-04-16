@@ -7,8 +7,7 @@
 // Variáveis globais
 char *tipoBusca;
 long int contBuscas;
-double tempoExecucao, buscaBinariaTempoExecucao, buscaSequencialTempoExecucao;
-time_t inicioExecucao, fimExcucao; // Variaveis do tipo clock que faram a captura do tempo
+double buscaBinariaTempoExecucao, buscaSequencialTempoExecucao;
 
 // Estruturas de dados
 typedef struct {

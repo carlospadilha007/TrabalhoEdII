@@ -40,27 +40,30 @@ void criaCodigo(TUsuario *vet) {
 	}
 	for (i = 0; i < n; i++) {
 		do {
-			if (num < 1000000) {
-				if (betina[num] == 0) {
-					betina[num] = 1;
+			
+			if (betina[num] == 0) {
+				betina[num] = 1;
+			}
+			while (1 == 1)
+			{
+				num = 0;
+				num += rand() % 10 * (rand() % RAND_MAX + (rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000));
+				if (num < 1000000) {
+					break;
 				}
 			}
-			num = 0;
-			num += rand() % 10 * (rand() % RAND_MAX + (rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000 + rand() % 10000));
-			if (num < 1000000) {
-				if (betina[num] == 0) {
-					vet[i].codigo = num;
-				}
+			
+			if (betina[num] == 0) {
+				vet[i].codigo = num;
 			}
-			if (num > 1000000) {
-				continue;
-			}
+			
 		} while (betina[num] == 1);
 	}
 	free(betina);
 }
 
-void criaDadosVetor(TUsuario *vet) {
+void criaDadosVetor(TUsuario *vet){
+	criaCodigo(vet);
 	long int i;
 	int j, tam, teste;
 	char aux[50] = "\0";

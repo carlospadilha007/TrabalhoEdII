@@ -63,7 +63,7 @@ void mergeSort(TUsuario* vet, int p, int r) {
 
 void merge(TUsuario* vet, int p, int q, int r) {
 	long int n1, n2, i, j, k;
-	n1 = q - p + 1;
+	n1 = (q - p) + 1;
 	n2 = r - q;
 	TUsuario* E, *D;
 	E = (TUsuario*)malloc(sizeof(TUsuario) * (n1 + 1));
@@ -74,7 +74,7 @@ void merge(TUsuario* vet, int p, int q, int r) {
 	for (j = 0; j < n2; j++) {
 		D[j] = vet[q + 1 + j];
 	}
-	E[n1].codigo = LONG_MAX; D[n2].codigo = LONG_MAX;
+	E[n1].codigo = INT_MAX; D[n2].codigo = INT_MAX;
 	i = j = 0;
 	for (k = p; k <= r; k++) {
 		if (E[i].codigo <= D[j].codigo) {

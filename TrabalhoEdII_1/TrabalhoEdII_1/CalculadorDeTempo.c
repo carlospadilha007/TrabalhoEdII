@@ -5,7 +5,7 @@
 #include "Sort.h"
 
 void calculadorPricipal(TUsuario *vet) {
-	//Calcula o tempo do Bubble
+	/*//Calcula o tempo do Bubble
 	tipoBusca = "Bubble Sort";
 	calculaBubble(vet);
 	escreveSaida();
@@ -16,7 +16,7 @@ void calculadorPricipal(TUsuario *vet) {
 	//Calcula o tempo do Insertion
 	tipoBusca = "Insertion Sort";
 	calculaInsertion(vet);
-	escreveSaida();
+	escreveSaida();*/
 	//Calcula o tempo do Shell
 	tipoBusca = "Shell Sort";
 	calculaShell(vet);
@@ -36,6 +36,7 @@ void calculadorPricipal(TUsuario *vet) {
 }
 
 void calculaBubble(TUsuario *vet) {
+	time_t inicioExecucao, fimExcucao;
 	long int chave;
 	buscaBinariaTempoExecucao = buscaSequencialTempoExecucao = 0;
 	contBuscas = 0;
@@ -65,6 +66,7 @@ void calculaBubble(TUsuario *vet) {
 }
 
 void calculaSelection(TUsuario *vet) {
+	time_t inicioExecucao, fimExcucao;
 	long int chave;
 	buscaBinariaTempoExecucao = buscaSequencialTempoExecucao = 0;
 	contBuscas = 0;
@@ -94,6 +96,7 @@ void calculaSelection(TUsuario *vet) {
 }
 
 void calculaInsertion(TUsuario *vet) {
+	time_t inicioExecucao, fimExcucao;
 	long int chave;
 	buscaBinariaTempoExecucao = buscaSequencialTempoExecucao = 0;
 	contBuscas = 0;
@@ -123,6 +126,7 @@ void calculaInsertion(TUsuario *vet) {
 }
 
 void calculaShell(TUsuario* vet) {
+	time_t inicioExecucao, fimExcucao;
 	long int chave;
 	buscaBinariaTempoExecucao = buscaSequencialTempoExecucao = 0;
 	contBuscas = 0;
@@ -152,6 +156,7 @@ void calculaShell(TUsuario* vet) {
 }
 
 void calculaMerge(TUsuario *vet) {
+	time_t inicioExecucao, fimExcucao;
 	long int chave;
 	buscaBinariaTempoExecucao = buscaSequencialTempoExecucao = 0;
 	contBuscas = 0;
@@ -181,6 +186,7 @@ void calculaMerge(TUsuario *vet) {
 }
 
 void calculaHeap(TUsuario *vet) {
+	time_t inicioExecucao, fimExcucao;
 	long int chave;
 	buscaBinariaTempoExecucao = buscaSequencialTempoExecucao = 0;
 	contBuscas = 0;
@@ -210,6 +216,7 @@ void calculaHeap(TUsuario *vet) {
 }
 
 void calculaQuick(TUsuario *vet) {
+	time_t inicioExecucao, fimExcucao;
 	long int chave;
 	buscaBinariaTempoExecucao = buscaSequencialTempoExecucao = 0;
 	contBuscas = 0;
