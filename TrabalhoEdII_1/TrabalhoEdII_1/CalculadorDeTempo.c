@@ -4,6 +4,12 @@
 #include<time.h>
 #include "Sort.h"
 
+/** Este arquivo é responsavel por calcular o numero de buscas necessárias
+ *	para a busca binaria ser mais vantajosa para a busca sequncial para 
+ *	cada algortimo de busca.
+**/
+
+// Função que fara a chamada das funções que calcularam a eficacia de cada algoritmo de ordenação
 void calculadorPricipal(TUsuario *vet) {
 	//Calcula o tempo do Bubble
 	tipoBusca = "Bubble Sort";
@@ -35,6 +41,7 @@ void calculadorPricipal(TUsuario *vet) {
 	escreveSaida();
 }
 
+// Função que fara o calculo de eficiencia do busca bin. + bublle
 void calculaBubble(TUsuario *vet) {
 	time_t inicioExecucao, fimExcucao;
 	long int chave;
@@ -42,13 +49,14 @@ void calculaBubble(TUsuario *vet) {
 	contBuscas = 0;
 	TUsuario *auxvet;
 	auxvet = (TUsuario*)malloc(sizeof(TUsuario) * (n));
+	// cria dois vetores de conteudo identico
 	encheVetor(auxvet);
 	encheVetor(vet);
 	inicioExecucao = clock();
 	bubbleSort(vet);
 	fimExcucao = clock();
 	buscaBinariaTempoExecucao += (double)(fimExcucao - inicioExecucao) / CLOCKS_PER_SEC;
-	while (buscaBinariaTempoExecucao >= buscaSequencialTempoExecucao) {
+	while (buscaBinariaTempoExecucao >= buscaSequencialTempoExecucao) { // executa enquanto a busca seq. for mais rapida que a busca bin.
 		chave = geraChave();
 		//Busca Binária
 		inicioExecucao = clock();
@@ -65,6 +73,7 @@ void calculaBubble(TUsuario *vet) {
 	free(auxvet);
 }
 
+// Função que fara o calculo de eficiencia do busca bin. + selection
 void calculaSelection(TUsuario *vet) {
 	time_t inicioExecucao, fimExcucao;
 	long int chave;
@@ -72,13 +81,14 @@ void calculaSelection(TUsuario *vet) {
 	contBuscas = 0;
 	TUsuario *auxvet;
 	auxvet = (TUsuario*)malloc(sizeof(TUsuario) * (n));
+	// cria dois vetores de conteudo identico
 	encheVetor(auxvet);
 	encheVetor(vet);
 	inicioExecucao = clock();
 	selectionSort(vet);
 	fimExcucao = clock();
 	buscaBinariaTempoExecucao += (double)(fimExcucao - inicioExecucao) / CLOCKS_PER_SEC;
-	while (buscaBinariaTempoExecucao >= buscaSequencialTempoExecucao) {
+	while (buscaBinariaTempoExecucao >= buscaSequencialTempoExecucao) { // executa enquanto a busca seq. for mais rapida que a busca bin.
 		chave = geraChave();
 		//Busca Binária
 		inicioExecucao = clock();
@@ -95,6 +105,7 @@ void calculaSelection(TUsuario *vet) {
 	free(auxvet);
 }
 
+// Função que fara o calculo de eficiencia do busca bin. + insertion
 void calculaInsertion(TUsuario *vet) {
 	time_t inicioExecucao, fimExcucao;
 	long int chave;
@@ -102,13 +113,14 @@ void calculaInsertion(TUsuario *vet) {
 	contBuscas = 0;
 	TUsuario *auxvet;
 	auxvet = (TUsuario*)malloc(sizeof(TUsuario) * (n));
+	// cria dois vetores de conteudo identico
 	encheVetor(auxvet);
 	encheVetor(vet);
 	inicioExecucao = clock();
 	insertionSort(vet);
 	fimExcucao = clock();
 	buscaBinariaTempoExecucao += (double)(fimExcucao - inicioExecucao) / CLOCKS_PER_SEC;
-	while (buscaBinariaTempoExecucao >= buscaSequencialTempoExecucao) {
+	while (buscaBinariaTempoExecucao >= buscaSequencialTempoExecucao) { // executa enquanto a busca seq. for mais rapida que a busca bin.
 		chave = geraChave();
 		//Busca Binária
 		inicioExecucao = clock();
@@ -125,6 +137,7 @@ void calculaInsertion(TUsuario *vet) {
 	free(auxvet);
 }
 
+// Função que fara o calculo de eficiencia do busca bin. + shell
 void calculaShell(TUsuario* vet) {
 	time_t inicioExecucao, fimExcucao;
 	long int chave;
@@ -132,13 +145,14 @@ void calculaShell(TUsuario* vet) {
 	contBuscas = 0;
 	TUsuario* auxvet;
 	auxvet = (TUsuario*)malloc(sizeof(TUsuario) * (n));
+	// cria dois vetores de conteudo identico
 	encheVetor(auxvet);
 	encheVetor(vet);
 	inicioExecucao = clock();
 	shellSort(vet);
 	fimExcucao = clock();
 	buscaBinariaTempoExecucao += (double)(fimExcucao - inicioExecucao) / CLOCKS_PER_SEC;
-	while (buscaBinariaTempoExecucao >= buscaSequencialTempoExecucao) {
+	while (buscaBinariaTempoExecucao >= buscaSequencialTempoExecucao) { // executa enquanto a busca seq. for mais rapida que a busca bin.
 		chave = geraChave();
 		//Busca Binária
 		inicioExecucao = clock();
@@ -155,6 +169,7 @@ void calculaShell(TUsuario* vet) {
 	free(auxvet);
 }
 
+// Função que fara o calculo de eficiencia do busca bin. + merge
 void calculaMerge(TUsuario *vet) {
 	time_t inicioExecucao, fimExcucao;
 	long int chave;
@@ -162,13 +177,14 @@ void calculaMerge(TUsuario *vet) {
 	contBuscas = 0;
 	TUsuario *auxvet;
 	auxvet = (TUsuario*)malloc(sizeof(TUsuario) * (n));
+	// cria dois vetores de conteudo identico
 	encheVetor(auxvet);
 	encheVetor(vet);
 	inicioExecucao = clock();
 	mergeSort(vet, 0, n - 1);
 	fimExcucao = clock();
 	buscaBinariaTempoExecucao += (double)(fimExcucao - inicioExecucao) / CLOCKS_PER_SEC;
-	while (buscaBinariaTempoExecucao >= buscaSequencialTempoExecucao) {
+	while (buscaBinariaTempoExecucao >= buscaSequencialTempoExecucao) { // executa enquanto a busca seq. for mais rapida que a busca bin.
 		chave = geraChave();
 		//Busca Binária
 		inicioExecucao = clock();
@@ -185,6 +201,7 @@ void calculaMerge(TUsuario *vet) {
 	free(auxvet);
 }
 
+// Função que fara o calculo de eficiencia do busca bin. + heap
 void calculaHeap(TUsuario *vet) {
 	time_t inicioExecucao, fimExcucao;
 	long int chave;
@@ -192,13 +209,14 @@ void calculaHeap(TUsuario *vet) {
 	contBuscas = 0;
 	TUsuario* auxvet;
 	auxvet = (TUsuario*)malloc(sizeof(TUsuario) * (n));
+	// cria dois vetores de conteudo identico
 	encheVetor(auxvet);
 	encheVetor(vet);
 	inicioExecucao = clock();
 	heapSort(vet);
 	fimExcucao = clock();
 	buscaBinariaTempoExecucao += (double)(fimExcucao - inicioExecucao) / CLOCKS_PER_SEC;
-	while (buscaBinariaTempoExecucao >= buscaSequencialTempoExecucao) {
+	while (buscaBinariaTempoExecucao >= buscaSequencialTempoExecucao) { // executa enquanto a busca seq. for mais rapida que a busca bin.
 		chave = geraChave();
 		//Busca Binária
 		inicioExecucao = clock();
@@ -215,6 +233,7 @@ void calculaHeap(TUsuario *vet) {
 	free(auxvet);
 }
 
+// Função que fara o calculo de eficiencia do busca bin. + quick
 void calculaQuick(TUsuario *vet) {
 	time_t inicioExecucao, fimExcucao;
 	long int chave;
@@ -222,13 +241,14 @@ void calculaQuick(TUsuario *vet) {
 	contBuscas = 0;
 	TUsuario* auxvet;
 	auxvet = (TUsuario*)malloc(sizeof(TUsuario) * (n));
+	// cria dois vetores de conteudo identico
 	encheVetor(auxvet);
 	encheVetor(vet);
 	inicioExecucao = clock();
 	quickSort(vet, 0, n - 1);
 	fimExcucao = clock();
 	buscaBinariaTempoExecucao += (double)(fimExcucao - inicioExecucao) / CLOCKS_PER_SEC;
-	while (buscaBinariaTempoExecucao >= buscaSequencialTempoExecucao) {
+	while (buscaBinariaTempoExecucao >= buscaSequencialTempoExecucao) { // executa enquanto a busca seq. for mais rapida que a busca bin.
 		chave = geraChave();
 		//Busca Binária
 		inicioExecucao = clock();

@@ -31,8 +31,8 @@ void quickSort(TUsuario* vet, long int p, long int r);
 int Particiona(TUsuario* vet, long int p, long int r);
 
 //Algoritmos de busca
-void busca_Sequencial(TUsuario *vetor, long int chave);
-void busca_Binaria(TUsuario *vetor, long int chave);
+long int busca_Sequencial(TUsuario *vetor, long int chave);
+long int busca_Binaria(TUsuario *vetor, long int chave);
 
 // Funções de apoio
 void escreveVetor(TUsuario vet[]);

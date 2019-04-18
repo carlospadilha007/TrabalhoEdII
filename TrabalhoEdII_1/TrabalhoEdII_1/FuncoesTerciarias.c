@@ -3,6 +3,12 @@
 #include<stdlib.h>
 #include<string.h>
 #include "Sort.h"
+
+/**	
+ * Este arquivo guarda algumas funções de apoio para projeto
+ **/
+
+// Imprimira os campos da struct em cada posição do vetor, o intervalo passado como parametro
 void imprimiVetor(TUsuario vet[], long int inicio, long int fim) {
 	long int i;
 	for (i = inicio; i < fim; i++) {
@@ -15,6 +21,8 @@ void imprimiVetor(TUsuario vet[], long int inicio, long int fim) {
 	printf("\n\n");
 	return;
 }
+
+// Lera os codigos em cada posição do vetor
 void escreveVetor(TUsuario vet[]) {
 	int i, j, tam;
 	srand(time(NULL));
@@ -40,7 +48,7 @@ void escreveVetor(TUsuario vet[]) {
 	return;
 }
 
-
+// Função que gerara os codigos e os returnara para as funções do arquivo de calculo de tempo
 long int geraChave() {
 	long int num = 0;
 	do {

@@ -3,6 +3,11 @@
 #include<stdlib.h>
 #include "Sort.h"
 
+/**
+  * Este arquivo armazena todas funções que de manipualam os arquivos de entrada e saída
+**/
+
+// Função que cria os arquivos de entrada e saida
 void criaArquivos() {
 	FILE *file1;
 	FILE *file2;
@@ -12,6 +17,7 @@ void criaArquivos() {
 	fclose(file2);
 }
 
+// Função que abilita a leitura de arquivos
 void leitorArquivos(TUsuario *vet) {
 	FILE *file;
 	file = fopen("Entrada.dat", "r");
@@ -20,17 +26,20 @@ void leitorArquivos(TUsuario *vet) {
 	}
 	file = fclose("Entrada.dat");
 }
+
+// Função que fara a escrita dos valores do vetor um arquivo binario .dat
 void escreverArquivos(TUsuario *vet) {
 	FILE *file;
 	file = fopen("Entrada.dat", "wb");
 	long int i;
 	for (i = 0; i < n; i++) {
-		//fprintf(file, "%li %s %s %s\n", vet[i].codigo, vet[i].nome, vet[i].email, vet[i].senha);
+		// Escrita de valores atravez da função fwrite que aloca e grava no arquivo uma struct inteira
 		fwrite(&vet[i], sizeof(TUsuario), 1, file);
 	}
 	return;
 }
 
+// Função que criara um número entre 0 e 1000000 e atribuirá o mesmo ao campo da respectiva posição do vetor de struct
 void criaCodigo(TUsuario *vet) {
 	long int *betina;
 	betina = (long int*)malloc(sizeof(long int) * (1000000));
@@ -62,6 +71,7 @@ void criaCodigo(TUsuario *vet) {
 	free(betina);
 }
 
+// Função que cria os demais dados das estruturas do vetor: Nome, Email e Senha
 void criaDadosVetor(TUsuario *vet){
 	criaCodigo(vet);
 	long int i;
@@ -88,6 +98,7 @@ void criaDadosVetor(TUsuario *vet){
 	return;
 }
 
+// Função que fara a leitura dos dados do arquivo binario e prenchera o vetor
 void encheVetor(TUsuario *vet) {
 	FILE *file;
 	do {
@@ -100,6 +111,10 @@ void encheVetor(TUsuario *vet) {
 	fclose(file);
 	return;
 }
+
+/** Função que escrera no arquivo de saida o metodo de ordeção, e o tempo e o numero de buscas necessarias para
+  * A busca binnaria ser mais eficiente que a busca sequencial
+**/
 void escreveSaida() {
 	FILE *file;
 	file = fopen("Saida.txt", "a");

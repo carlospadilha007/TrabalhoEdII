@@ -3,6 +3,9 @@
 #include<stdlib.h>
 #include<limits.h>
 #include"Sort.h"
+/** 
+ * Este arquivo guarda os algoritmos  de ordenação
+ **/
 
 void bubbleSort(TUsuario* vet) {
 	long int  topo, bolha;
